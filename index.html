@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Updates | Blog</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>cairbresmith</h1>
+            <p class="subtitle">Weekly snapshots, ideas & explorations</p>
+            <nav>
+                <a href="#all" class="active" data-filter="all">All</a>
+                <a href="#ideas" data-filter="ideas">Ideas</a>
+                <a href="#snapshots" data-filter="snapshots">Snapshots</a>
+                <a href="#tech" data-filter="tech">Tech</a>
+                <a href="#submit" data-filter="submit">Submit</a>
+            </nav>
+        </header>
+
+        <main id="content">
+            <!-- Submit Form Section (Hidden by default) -->
+            <section id="submit-section" class="hidden">
+                <h2>Submit Update</h2>
+                <form id="update-form">
+                    <div class="form-group">
+                        <label for="title">Title</label>
+                        <input type="text" id="title" name="title" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="category">Category</label>
+                        <select id="category" name="category" required>
+                            <option value="ideas">Ideas</option>
+                            <option value="snapshots">Snapshots</option>
+                            <option value="tech">Tech</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="content">Content</label>
+                        <textarea id="content-input" name="content" rows="10" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="tags">Tags (comma separated)</label>
+                        <input type="text" id="tags" name="tags" placeholder="e.g., javascript, design, thoughts">
+                    </div>
+                    <button type="submit" class="btn-primary">Submit Update</button>
+                    <button type="button" class="btn-secondary" onclick="showAllPosts()">Cancel</button>
+                </form>
+            </section>
+
+            <!-- Posts Container -->
+            <div id="posts-container">
+                <!-- Posts will be dynamically inserted here -->
+            </div>
+        </main>
+
+        <footer>
+            <p>
+                <span id="current-year"></span> · 
+                <a href="#" id="theme-toggle">Toggle Dark Mode</a> · 
+                <a href="#submit" data-filter="submit">Submit Update</a>
+            </p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
