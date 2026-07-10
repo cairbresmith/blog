@@ -1,3 +1,14 @@
+# Jekyll
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+vendor/
+
+# Ruby
+Gemfile.lock
+.bundle/
+
 # macOS
 .DS_Store
 .AppleDouble

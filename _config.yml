@@ -1,0 +1,47 @@
+# Site settings
+title: cairbresmith
+description: Weekly snapshots, ideas & explorations
+author: Cair Bresmith
+url: https://cairbresmith.github.io
+baseurl: /blog
+
+# Build settings
+markdown: kramdown
+permalink: /:year/:month/:day/:title/
+
+# Theme settings
+theme_mode: auto # auto, light, dark
+
+# Pagination
+paginate: 10
+paginate_path: "/page:num/"
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-paginate
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - deploy.sh
+  - README.md
+  - DEPLOYMENT.md
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /:year/:month/:day/:title/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"

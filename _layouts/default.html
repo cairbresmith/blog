@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+    {% seo %}
+    {% feed_meta %}
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
+            <p class="subtitle">{{ site.description }}</p>
+            <nav>
+                <a href="{{ '/' | relative_url }}" {% if page.url == '/' %}class="active"{% endif %}>All</a>
+                <a href="{{ '/ideas' | relative_url }}" {% if page.url == '/ideas/' %}class="active"{% endif %}>Ideas</a>
+                <a href="{{ '/snapshots' | relative_url }}" {% if page.url == '/snapshots/' %}class="active"{% endif %}>Snapshots</a>
+                <a href="{{ '/tech' | relative_url }}" {% if page.url == '/tech/' %}class="active"{% endif %}>Tech</a>
+            </nav>
+        </header>
+
+        <main id="content">
+            {{ content }}
+        </main>
+
+        <footer>
+            <p>
+                <span id="current-year">{{ 'now' | date: "%Y" }}</span> · 
+                <a href="#" id="theme-toggle">Toggle Dark Mode</a> · 
+                <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
+            </p>
+        </footer>
+    </div>
+
+    <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+</body>
+</html>
