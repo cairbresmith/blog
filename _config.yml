@@ -2,8 +2,8 @@
 title: cairbresmith
 description: Weekly snapshots, ideas & explorations
 author: Cair Bresmith
-url: https://cairbresmith.github.io
-baseurl: /blog
+url: http://blog.cairbre.co.uk
+baseurl: ""
 
 # Build settings
 markdown: kramdown
